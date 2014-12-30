@@ -2,7 +2,7 @@
     "name": "axstrad/doctrine-extensions",
     "description": "Extensions for Doctrine ORM",
     "type": "library",
-    "keywords": ["doctrine", "doctrine/orm", "extensions"],
+    "keywords": ["axstrad", "doctrine", "orm", "extensions"],
     "license": "MIT",
     "authors": [
         {
