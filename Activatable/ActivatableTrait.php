@@ -12,9 +12,6 @@
 
 namespace Axstrad\DoctrineExtensions\Activatable;
 
-use Doctrine\ORM\Mapping as ORM;
-
-
 /**
  * Axstrad\DoctrineExtensions\Activatable\ActivatableTrait
  *
