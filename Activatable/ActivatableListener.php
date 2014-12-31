@@ -13,7 +13,8 @@
 namespace Axstrad\DoctrineExtensions\Activatable;
 
 use Doctrine\Common\EventArgs;
-use Doctrine\Common\Persistence\Event\LoadClassMetadataEventArgs;
+use Doctrine\Common\Persistence\Event\LoadClassMetadataEventArgs as CommonEventArgs;
+use Doctrine\ORM\Event\LoadClassMetadataEventArgs as OrmEventArgs;
 use Gedmo\Mapping\MappedEventSubscriber;
 use Axstrad\DoctrineExtensions\Exception\InvalidArgumentException;
 
@@ -37,10 +38,15 @@ class ActivatableListener extends MappedEventSubscriber
      *
      * @param EventArgs $eventArgs
      * @return void
+     * @throws InvalidArgumentException IF $eventArgs is not an instance of
+     *         Doctrine\Common\Persistence\Event\LoadClassMetadataEventArgs or
+     *         Doctrine\ORM\Event\LoadClassMetadataEventArgs
      */
     public function loadClassMetadata(EventArgs $eventArgs)
     {
-        if (!$eventArgs instanceof LoadClassMetadataEventArgs) {
+        if ( ! $eventArgs instanceof CommonEventArgs
+            && ! $eventArgs instanceof OrmEventArgs
+        ) {
             throw InvalidArgumentException::create(
                 'Doctrine\Common\Persistence\Event\LoadClassMetadataEventArgs',
                 $eventArgs
