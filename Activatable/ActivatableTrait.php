@@ -23,7 +23,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @package Axstrad/DoctrineExtensions
  * @subpackage Activatable
  */
-trait ActivatableTrait {
+trait ActivatableTrait{
 
     /**
      * @ORM\Column(type="boolean", options={"default":true})

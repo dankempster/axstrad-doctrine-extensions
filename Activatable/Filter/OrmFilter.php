@@ -31,13 +31,14 @@ class OrmFilter extends SQLFilter
         $class = $targetEntity->getName();
         if (array_key_exists($class, $this->disabled) && $this->disabled[$class] === true) {
             return '';
-        } elseif (array_key_exists($targetEntity->rootEntityName, $this->disabled) && $this->disabled[$targetEntity->rootEntityName] === true) {
+        }
+        elseif (array_key_exists($targetEntity->rootEntityName, $this->disabled) && $this->disabled[$targetEntity->rootEntityName] === true) {
             return '';
         }
 
         $config = $this->getListener()->getConfiguration($this->getEntityManager(), $targetEntity->name);
 
-        if (!isset($config['activatable']) || !$config['activatable']) {
+        if ( ! isset($config['activatable']) || ! $config['activatable']) {
             return '';
         }
 
