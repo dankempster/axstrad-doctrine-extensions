@@ -1,12 +1,12 @@
 --- /dev/null
 +++ /dev/null
-@@ -23,7 +23,8 @@
-  * @package Axstrad/DoctrineExtensions
+@@ -20,7 +20,8 @@
   * @subpackage Activatable
   */
--trait ActivatableTrait {
+-trait ActivatableTrait{
 +trait ActivatableTrait
 +{
  
      /**
       * @ORM\Column(type="boolean", options={"default":true})
+ 
