@@ -17,4 +17,5 @@ namespace Axstrad\DoctrineExtensions\Exception;
  */
 class InvalidMappingException extends InvalidArgumentException
     implements Exception
-{}
+{
+}

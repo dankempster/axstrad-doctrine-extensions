@@ -45,7 +45,7 @@ class Yaml extends File implements Driver
             if (isset($classMapping['activatable'])) {
                 $config['activatable'] = true;
 
-                if (!isset($classMapping['activatable']['field_name'])) {
+                if ( ! isset($classMapping['activatable']['field_name'])) {
                     throw new InvalidMappingException('Field name for Activatable class is mandatory.');
                 }
 

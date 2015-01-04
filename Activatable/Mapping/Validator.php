@@ -43,7 +43,7 @@ class Validator
 
         $fieldMapping = $meta->getFieldMapping($field);
 
-        if (!in_array($fieldMapping['type'], self::$validTypes)) {
+        if ( ! in_array($fieldMapping['type'], self::$validTypes)) {
             throw new InvalidMappingException(sprintf('Field "%s" must be of one of the following types: "%s"',
                 $fieldMapping['type'],
                 implode(', ', self::$validTypes)));

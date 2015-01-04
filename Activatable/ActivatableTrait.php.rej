@@ -1,0 +1,12 @@
+--- /dev/null
++++ /dev/null
+@@ -20,7 +20,8 @@
+  * @subpackage Activatable
+  */
+-trait ActivatableTrait{
++trait ActivatableTrait
++{
+ 
+     /**
+      * @ORM\Column(type="boolean", options={"default":true})
+ 
