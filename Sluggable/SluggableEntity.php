@@ -31,4 +31,9 @@ class SluggableEntity implements
     Sluggable
 {
     use SluggableTrait;
+
+    /**
+     * @var null|string $slug
+     */
+    protected $slug = null;
 }

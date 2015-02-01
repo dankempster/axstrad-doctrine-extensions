@@ -16,8 +16,8 @@ namespace Axstrad\DoctrineExtensions\Sluggable;
 /**
  * Axstrad\DoctrineExtensions\Sluggable\SluggableTrait
  *
- * Provides the following fields
- *  - slug : string  - unique index
+ * Requires the following class properties
+ *  - $slug = null
  *
  * @author Dan Kempster <dev@dankempster.co.uk>
  * @license MIT
@@ -26,12 +26,6 @@ namespace Axstrad\DoctrineExtensions\Sluggable;
  */
 trait SluggableTrait
 {
-    /**
-     * @var string The entity's slug
-     */
-    protected $slug;
-
-
     /**
      * Get slug
      *
